@@ -56,6 +56,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\PlacementIndicator.cs" />
+     <Compile Include="Assets\Scripts\AutoObjectInPlane.cs" />
+     <Compile Include="Assets\Scripts\ObjectTouch.cs" />
+     <Compile Include="Assets\Scripts\PlacementObject.cs" />
+     <Compile Include="Assets\Scripts\onClick.cs" />
      <Compile Include="Assets\Spam.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
