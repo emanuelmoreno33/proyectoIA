@@ -5,7 +5,7 @@ using UnityEngine;
 public class onClick : MonoBehaviour
 {
     [SerializeField]
-    private GameObject obj;
+    private Fruta obj;
 
     [SerializeField]
     private Camera arCamara;
@@ -30,9 +30,10 @@ public class onClick : MonoBehaviour
                     PlacementObject placementObjects = hitObject.transform.GetComponent<PlacementObject>();
                     if (placementObjects != null)
                     {
-                        if(placementObjects.gameObject == obj)
+                        if(placementObjects.gameObject == obj.gameObject)
                         {
-                            obj.SetActive(false);
+                            obj.IsActivated = false;
+                            obj.gameObject.SetActive(false);
                         }
                     }
                 }

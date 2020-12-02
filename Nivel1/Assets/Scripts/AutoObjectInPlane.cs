@@ -25,6 +25,7 @@ public class AutoObjectInPlane : MonoBehaviour
         if (args.added != null && obj == null)
         {
             ARPlane arPlane = args.added[0];
+            obj = Instantiate(SpawnObject, new Vector3(arPlane.transform.position.x + 1,arPlane.transform.position.y),Quaternion.identity);
             obj = Instantiate(SpawnObject, arPlane.transform.position, Quaternion.identity);
         }
     }
