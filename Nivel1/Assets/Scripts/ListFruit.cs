@@ -1,42 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ListFruit : MonoBehaviour
 {
-    public static List<Fruta> ListaFrutas;
+    [SerializeField]
+    private  PlacementObject Arbol;
 
     [SerializeField]
-    private PlacementObject Arbol;
+    public static List<Fruta> ListaFrutas;
 
+    void Awake()
+    {
+        ListaFrutas = new List<Fruta>();
+    }
     void Update()
     {
-        EndFrutas();
+        
     }
-    public void EndFrutas()
+    public static void EndFrutas(GameObject arg2)
     {
         int contador = 0;
-        foreach (Fruta fruta in ListaFrutas)
+        foreach (Fruta fruit in ListaFrutas)
         {
-            if (fruta.IsActivated != true)
+            if (fruit.IsActivated != false)
             {
                 contador++;
             }
         }
-        if (contador <= 3)
+        if (contador == 0)
         {
-            MeshRenderer meshRenderer = Arbol.GetComponent<MeshRenderer>();
-            meshRenderer.material.color = Color.black;
+            arg2.SetActive(true);
+
         }
         else
         {
-            MeshRenderer meshRenderer = Arbol.GetComponent<MeshRenderer>();
-            meshRenderer.material.color = Color.cyan;
         }
     }
 
-    public void addFruta(Fruta arg)
-    {
-        ListaFrutas.Add(arg);
-    }
 }

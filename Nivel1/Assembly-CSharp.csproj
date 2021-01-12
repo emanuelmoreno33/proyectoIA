@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Low Poly Fruits\resources\fruits_tester.cs" />
      <Compile Include="Assets\PlacementIndicator.cs" />
      <Compile Include="Assets\Scripts\AutoObjectInPlane.cs" />
      <Compile Include="Assets\Scripts\Fruta.cs" />
@@ -62,8 +63,11 @@
      <Compile Include="Assets\Scripts\ListFruit.cs" />
      <Compile Include="Assets\Scripts\ObjectTouch.cs" />
      <Compile Include="Assets\Scripts\OnClickTree.cs" />
+     <Compile Include="Assets\Scripts\OnClickVerdura.cs" />
      <Compile Include="Assets\Scripts\PlacementObject.cs" />
+     <Compile Include="Assets\Scripts\PointScript.cs" />
      <Compile Include="Assets\Scripts\Spam.cs" />
+     <Compile Include="Assets\Scripts\VidaScript.cs" />
      <Compile Include="Assets\Scripts\onClick.cs" />
      <None Include="Assets\BrokenVector\LowPolyTreePack\README.txt" />
  <Reference Include="UnityEngine">
@@ -641,6 +645,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/PC/Documents/Game AR/Nivel1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/PC/Documents/Game AR/Nivel1/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
  <HintPath>C:/Users/PC/Documents/Game AR/Nivel1/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>

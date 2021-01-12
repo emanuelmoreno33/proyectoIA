@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class onClick : MonoBehaviour
 {
     [SerializeField]
-    private Fruta obj;
+    private Camera arCamara;
 
     [SerializeField]
-    private Camera arCamara;
+    private GameObject pnGanador;
+
+    [SerializeField]
+    private PointScript ScriptPoints;
 
     private Vector2 touchPosicion = default;
 
@@ -27,14 +31,14 @@ public class onClick : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hitObject))
                 {
-                    PlacementObject placementObjects = hitObject.transform.GetComponent<PlacementObject>();
+                    Fruta placementObjects = hitObject.transform.GetComponent<Fruta>();
                     if (placementObjects != null)
                     {
-                        if(placementObjects.gameObject == obj.gameObject)
-                        {
-                            obj.IsActivated = false;
-                            obj.gameObject.SetActive(false);
-                        }
+                        ListFruit.ListaFrutas.Find(x => x.transform.position == placementObjects.transform.position).IsActivated = false;
+                        placementObjects.IsActivated = false;
+                        placementObjects.gameObject.SetActive(false);
+                        ScriptPoints.addPoints(placementObjects.Valor);
+                        ListFruit.EndFrutas(pnGanador);
                     }
                 }
             }

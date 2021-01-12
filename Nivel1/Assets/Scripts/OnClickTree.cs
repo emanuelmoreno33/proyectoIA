@@ -48,17 +48,18 @@ public class OnClickTree : MonoBehaviour
                         {
                             if(click == false)
                             {
+                                click = true;
                                 frutaspawn = new GameObject[5];
                                 verduraspawn = new GameObject[2];
                                 for (int i = 0; i < 5; i++)
                                 {
                                     frutaspawn[i] = Instantiate(fruta.gameObject, new Vector3(gameObject.transform.position.x + Random.Range((float)-0.06, (float)0.06), gameObject.transform.position.y, gameObject.transform.position.z - Random.Range((float)0.015, (float)0.06)), Quaternion.identity);
+                                    ListFruit.ListaFrutas.Add(frutaspawn[i].AddComponent<Fruta>());
                                 }
                                 for (int i = 0; i < 2; i++)
                                 {
                                     verduraspawn[i] = Instantiate(Verdura, new Vector3(gameObject.transform.position.x + Random.Range((float)-0.06, (float)0.06), gameObject.transform.position.y, gameObject.transform.position.z - Random.Range((float)0.015, (float)0.06)), Quaternion.identity);
                                 }
-                                click = true;
                             }
                         }
                     }

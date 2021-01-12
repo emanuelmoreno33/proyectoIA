@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.SceneManagement;
 
 public class ObjectTouch : MonoBehaviour
 {
+
     [SerializeField]
     private PlacementObject[] placedObjects;
 
@@ -23,7 +26,10 @@ public class ObjectTouch : MonoBehaviour
     void Awake()
     {
         ChangeSelectedObj(placedObjects[0]);
+        //Boton.onClick.AddListener(contar);
     }
+    //void contar()
+
     void Update()
     {
         if (Input.touchCount > 0)
@@ -66,4 +72,5 @@ public class ObjectTouch : MonoBehaviour
             }
         }
     }
+
 }
